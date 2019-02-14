@@ -43,7 +43,7 @@
     },
     {
       "pagePath": "pages/decor/cartoon/cartoon",
-      "text": "图库",
+      "text": "案例",
       "iconPath": "images/tabbar/t.png",
       "selectedIconPath": "images/tabbar/t1.png"
     },

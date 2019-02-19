@@ -1,4 +1,5 @@
 var WYY_HOST_URL = "https://wxapi.weiyunyi.com";
+//var WYY_HOST_URL = "http://127.0.0.1:81/jiyun";
 var type = "Fitment";
 module.exports = {
   wyy_host_api_url:WYY_HOST_URL,
@@ -9,6 +10,7 @@ module.exports = {
   //以下通用方法
 	//用户登录slogin
 	index_slogin:WYY_HOST_URL + "/Wap.php/Index/slogin",
+  //index_slogin: WYY_HOST_URL + "/miniProgram/user/code",
 	//错误日志errorLog 
 	index_errorLog :WYY_HOST_URL + "/Wap.php/Index/errorLog",
 	//获取分享信息 getShareInfo

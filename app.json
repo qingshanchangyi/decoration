@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/decor/home/home",
     "pages/decor/article/article",
     "pages/decor/article/articleD/articleD",
@@ -16,11 +16,11 @@
     "pages/decor/gallerItem/gallerD/gallerD",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#599fff",
-    "navigationBarTitleText": "上海吉韵装修有限公司",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "测试",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#515151",
@@ -29,39 +29,35 @@
     "backgroundColor": "white",
     "list": [
       {
-      "pagePath": "pages/decor/home/home",
-      "text": "首页",
-      "iconPath": "images/tabbar/h.png",
-      "selectedIconPath": "images/tabbar/h1.png"
+        "pagePath": "pages/decor/home/home",
+        "text": "首页",
+        "iconPath": "images/tabbar/h.png",
+        "selectedIconPath": "images/tabbar/h1.png"
       },
-      
-    {
-      "pagePath": "pages/decor/appoint/appoint",
-      "text": "预约",
-      "iconPath": "images/tabbar/s.png",
-      "selectedIconPath": "images/tabbar/s1.png"
-    },
-    {
-      "pagePath": "pages/decor/cartoon/cartoon",
-      "text": "案例",
-      "iconPath": "images/tabbar/t.png",
-      "selectedIconPath": "images/tabbar/t1.png"
-    },
-    {
-      "pagePath": "pages/decor/news/news",
-      "text": "资讯",
-      "iconPath": "images/tabbar/z.png",
-      "selectedIconPath": "images/tabbar/z1.png"
-    },
-    {
-      "pagePath": "pages/decor/map/map",
-      "text": "位置",
-      "iconPath": "images/tabbar/w.png",
-      "selectedIconPath": "images/tabbar/w1.png"
-    }
-    
-    
-
+      {
+        "pagePath": "pages/decor/appoint/appoint",
+        "text": "预约",
+        "iconPath": "images/tabbar/s.png",
+        "selectedIconPath": "images/tabbar/s1.png"
+      },
+      {
+        "pagePath": "pages/decor/cartoon/cartoon",
+        "text": "案例",
+        "iconPath": "images/tabbar/t.png",
+        "selectedIconPath": "images/tabbar/t1.png"
+      },
+      {
+        "pagePath": "pages/decor/news/news",
+        "text": "资讯",
+        "iconPath": "images/tabbar/z.png",
+        "selectedIconPath": "images/tabbar/z1.png"
+      },
+      {
+        "pagePath": "pages/decor/map/map",
+        "text": "位置",
+        "iconPath": "images/tabbar/w.png",
+        "selectedIconPath": "images/tabbar/w1.png"
+      }
     ]
   }
 }

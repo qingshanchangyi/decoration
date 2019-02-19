@@ -8,55 +8,67 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    wx.request({
-      url: con.hospital_getslide,
-      method: 'GET',
-      data: { wxappid: con.wyy_user_wxappid },
-      header: {
-        "Content-Type": "application/json"
-      },
-      success: function (res) {
-        // console.log(res.data.info);
-        that.setData({
-          list: res.data.info
+    //从云数据库找出导航栏图片
+    const db = wx.cloud.database()
+    db.collection('navimgs').where({
+      //条件
+    }).get({
+      success: res => {
+        this.setData({
+          list: res.data
         })
-        app.getUserInfo();
+        console.log('[navimgs] [查询记录] 成功: ', res.data)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[navimgs] [查询记录] 失败：', err)
       }
+    })
+    //从云数据库中找出首页类别图片
+    db.collection('typeimgs').where({
+      //条件
+    }).get({
+      success: res => {
+        this.setData({
+          type: res.data
+        })
+        console.log('[typeimgs] [查询记录] 成功: ', res.data)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[typeimgs] [查询记录] 失败：', err)
+      }
+    })
+   
 
-    });
-    wx.request({
-      url: con.hospital_gettype,
-      method: 'GET',
-      data: { wxappid: con.wyy_user_wxappid, count: 4 },
-      header: {
-        "Content-Type": "application/json"
-      },
-      success: function (res) {
-        // console.log(res.data.info);
-        that.setData({
-          type: res.data.info
+   //从云数据库中找出推荐图
+    db.collection('recimgs').where({
+      //条件
+    }).get({
+      success: res => {
+        this.setData({
+          galler: res.data
         })
-      }
-
-    });
-    wx.request({
-      url: con.hospital_getphotogroup,
-      method: 'GET',
-      data: { wxappid: con.wyy_user_wxappid, count: 4 },
-      header: {
-        "Content-Type": "application/json"
+        console.log('[recimgs] [查询记录] 成功: ', res.data)
       },
-      success: function (res) {
-        // console.log(res.data.info);
-        that.setData({
-          galler: res.data.info
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
         })
+        console.error('[recimgs] [查询记录] 失败：', err)
       }
-    });
+    })
 
   },
   bindType: function (e) {
-    // console.log(e.currentTarget.dataset.id);
+     console.log(e.currentTarget.dataset.id);
     var len = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: '../article/article?id=' + len,

@@ -136,14 +136,14 @@ Page({
 
     if (ok == 1) {
       wx.request({
-        url: con.hospital_postprerecord,
+        //url: con.hospital_postprerecord,
+        url:"http://127.0.0.1:81/jiyun/miniProgram/formsubmit",
         method: 'POST',
         data: { wxappid: con.wyy_user_wxappid, preid: id, openid: openid, record: JSON.stringify(e.detail.value) },
         header: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
         success: function (res) {
-          // console.log(res.data);
           stat = res.data.status;
           if (stat == 1) {
             wx.showToast({
